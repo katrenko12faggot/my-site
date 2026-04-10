@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мій сайт — дизайнер</title>
+
+<style>
+
+/* ===== ОСНОВА ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* ===== НАВІГАЦІЯ ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.05);
+    position: sticky;
+    top: 0;
+}
+
+.nav-left {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-left input {
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #38bdf8;
+}
+
+/* ===== HEADER ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+}
+
+.header-text {
+    max-width: 400px;
+}
+
+.btn1 {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.slogan {
+    font-size: 20px;
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+/* ===== КНОПКИ ===== */
+.btn {
+
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.btn2 {
+    
+    margin-top: 20px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* ===== КАРТИНКА ===== */
+.header-img img {
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* ===== ПРО МЕНЕ ===== */
+.about {
+    padding: 60px;
+    text-align: center;
+}
+
+.h {
+    margin: 20px auto;
+    width: 100px;
+    border: 1px solid #38bdf8;
+}
+
+/* ===== РОБОТИ ===== */
+.works {
+    padding: 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+     margin-top: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+    text-align: center;
+     text-decoration: none; 
+    color: white; 
+    display: block;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(56,189,248,0.2);
+}
+
+/* ===== ПРОЄКТИ ===== */
+.projects {
+    padding: 60px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* ===== АНИМАЦИЯ ===== */
+.card, .header-text, .about, .projects {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== Навігація ===== -->
+<nav class="navbar">
+    <div class="nav-left">
+        <input type="search" placeholder="Пошук...">
+        <span>+38 (000) 123-45-67</span>
+    </div>
+
+    <ul class="nav-menu">
+        <li><a href="#">Головна</a></li>
+        <li><a href="#about">Про мене</a></li> 
+        <li><a href="#works">Роботи</a></li>
+        <li><a href="#projects">Проекти</a></li>
+        <li><a href="#contacts">Контакти</a></li>
+    </ul>
+</nav>
+
+<!-- ===== Header ===== -->
+<header class="header">
+    <div class="header-text" style="margin-left: 200px; ">
+        <h1>Мій сайт</h1>
+        <p class="slogan">
+            Дизайн інтер'єру — мистецтво, яке поєднує естетику та функціональність.
+        </p>
+        <a href="#works" class="btn" >Перейти до робіт</a>
+    </div>
+
+    <div class="header-img" style="margin-right: 200px; margin-top: 20px;">
+        <img src="me.jpg" alt=""style="width: 500px;">
+    </div>
+</header>
+
+<!-- ===== Про мене ===== -->
+<section class="about" id="about"> 
+    <h1>Сайт молодої дизайнерки</h1>
+    <hr class="h" style="width: 500px;">
+    <p>
+        Я молодий та амбітний креативний дизайнер, який прагне поєднувати сучасні тенденції у світі дизайну
+         з індивідуальним підходом до кожного проєкту. Для мене важливо створювати не просто візуально привабливі роботи, 
+         а й передаати через них ідею, настрій та характер, роблячи кожен дизайн унікальним і змістовним. 
+         Я постійно слідкую за новими тенденціями, експерементую з формами, кольорами та стилями, щоб розвиватися 
+         та вдосконалювати свої навички.
+        Навчалась у коледжі «Сервер», де отримала знання з основ дизайну, композиції та тривмірного моделювання. 
+        Під час навчання я не лише опанувала технічні аспекти створення дизайну, але й навчилася мислити креативно, 
+        працювати з ідеями та втілювати їх у життя. Мій досвід дозволяє меня працювати з різними напрямами дизайну та 
+        створювати проєкти, які поєднують естетику, функціональність і сучасний підхід.
+    </p>
+</section>
+
+<!-- ===== Мої роботи ===== -->
+<section class="works" id="works">
+    <h2>Мої роботи</h2>
+
+    <div class="cards">
+        <a href="veb.html" class="card">
+            <img src="афиша джаз.png" alt=""style="width: 200px;"> 
+            <h3>Комп'ютерне проектування</h3></a>
+        <a href="3dmax.html" class="card">
+            <img src="НОВИГОТ ЧАШКИ.jpg" alt=""style="width: 200px;">
+            <h3>3D Max</h3></a>
+        <a href="zhyvopis.html" class="card">
+            <img src="j4.jpg" alt=""style="width: 200px;">
+            <h3>Живопис</h3></a>
+        <a href="risunok.html" class="card">
+            <img src="ris2.jpg" alt=""style="width: 200px;">
+            <h3>Рисунок</h3></a>
+        <a href="kompozytsiya.html" class="card">
+            <img src="k1.jpg" alt=""style="width: 200px;">
+            <h3>Композиція</h3></a>
+    </div>
+</section>
+
+<!-- ===== Проекти ===== -->
+<section class="projects" id="projects">
+    <h2>Моя дипломна робота</h2>
+    <hr class="h"style="width: 500px;">
+    <p>Дизайн-проєкт інтер'єру ресторану з елементами фірмового стилю</p>
+
+    <div class="cards">
+        <div class="card">
+            <p>Сьогодні дизайн інтер'єру відіграє важливу роль у створенні атмосфери громадських місць, таких як ресторани. Він має бути не лише функціональним, але й естетично привабливим, щоб зацікавлювати відвідувачів. Тема "Дизайн інтер'єру ресторанів у стилі модерн" набуває все більшої популярності оскільки в сучасному світі, перенасиченому інформацією та візуальним шумом, людина прагне до просторів, які дарують відчуття гармонії, краси та затишку.
+Актуальність теми зумовлена кількома факторами. По-перше, зростаюча конкуренція на ринку ресторанних послуг змушує власників закладів шукати нові способи залучення клієнтів, і унікальний, продуманий дизайн стає однією з ключових конкурентних переваг. По-друге, спостерігається загальна тенденція до повернення історичних стилів у сучасну архітектуру та дизайн, їх переосмислення та адаптація до потреб сьогодення. Модерн з його філософією єдності людини і природи, індивідуальним підходом до кожного проєкту, відсутністю прямих ліній і жорстких канонів сучасним і затребуваним. По-третє, в Одесі, місті з багатою історією, подібні проєкти сприяють розвитку туризму та комерції. Місто зберігає чимало пам'яток цієї епохи, і створення сучасного інтер'єру в цій стилістиці дозволяє підтримати історичний контекст, сприяє розвитку туризму та формуванню культурної ідентичності міського середовища.
+Місцем реалізації такого задуму став будинок Кадора на вулиці Європейській, 27. Його трансформація у ресторан гармонійно об'єднує історичну спадщину з елементами сучасності. Метою дипломного проєкту є створення цілісного, функціонально досконалого та естетично виразного дизайн-проєкту інтер'єру ресторану в стилі модерн для приміщення на п'ятому поверсі торгово-офісного комплексу Kadorr в Одесі, який би відповідав потребам сучасних відвідувачів, підкреслював унікальні особливості локації та забезпечував комерційну успішність закладу. Основою композиції у дизайні інтер’єру стануть плавні лінії, що імітують природні форми, які знайдуть своє відображення в дизайні стелі та меблів. Колірна гама будуватиметься на темних природних відтінках: зелений, коричневий, теракотовий у поєднанні з акцентами латуні. Особлива увага приділятиметься освітленню, покликаному створити камерну, затишну атмосферу, що підкреслює вишуканість ліній і фактур. 
+Практичне значення роботи полягає в можливості реального втілення даного проєкту, що дозволить не лише створити конкурентоспроможний, економічно ефективний ресторанний бізнес у престижному районі міста, але й збагатити культурне середовище Одеси, запропонувавши мешканцям і гостям міста новий якісний простір для дозвілля, виконаний з повагою до історичної спадщини та з використанням сучасних дизайнерських підходів. Проєкт демонструє, як звернення до класичних стилів у їх сучасній інтерпретації може стати основою для створення актуального, затребуваного середовища, що відповідає найвищим вимогам комфорту, безпеки та естетики.
+
+</p>
+        </div>
+
+        <div class="card">
+          <img src="дип.jpg" alt=""style="width: 600px;">
+        </div>
+    </div>
+
+</section>
+
+<!-- ===== Footer ===== -->
+<footer class="footer" id="contacts">
+    <p>Контакти: pupukaka@email.com | +38 (000) 123-45-67</p>
+    <p>Автор сайту: Катренко Єлизавета</p>
+</footer>
+
+</body>
+</html>
